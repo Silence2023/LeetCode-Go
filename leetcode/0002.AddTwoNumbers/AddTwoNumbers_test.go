@@ -67,6 +67,21 @@ func Test_AddTwoNumbers(t *testing.T) {
 			para2{[]int{1, 8, 3}, []int{7, 1}},
 			ans2{[]int{8, 9, 3}},
 		},
+
+		{
+			para2{[]int{0}, []int{7, 3}},
+			ans2{[]int{7, 3}},
+		},
+
+		{
+			para2{[]int{9, 1, 6}, []int{0}},
+			ans2{[]int{9, 1, 6}},
+		},
+
+		{
+			para2{[]int{9, 9, 9, 9, 9, 9, 9}, []int{9, 9, 9, 9}},
+			ans2{[]int{8, 9, 9, 9, 0, 0, 0, 1}},
+		},
 		// 如需多个测试，可以复制上方元素。
 	}
 

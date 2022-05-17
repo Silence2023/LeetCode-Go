@@ -38,4 +38,5 @@ It is guaranteed that the list represents a number that does not have leading ze
 
 
 ## 解题思路
-
+生成一个初始节点的结构体，Val为0，用于最后的结果返回
+遍历两个节点，当其中一个节点为空时，遍历另外一个节点时，可以提前判断有没有进位，没有的话可以直接将Next指向非空节点即可。
