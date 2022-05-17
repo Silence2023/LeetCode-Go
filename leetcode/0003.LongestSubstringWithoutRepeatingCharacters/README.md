@@ -37,4 +37,6 @@ s consists of English letters, digits, symbols and spaces.
 给定一个字符串s，求最长不重复字符子字符串的长度
 
 ## 解题思路
-
+我的思路：
+* 先对针对空字符串或者纯空格字符串的特殊情况单独处理
+* 生成slice，遍历字符串，当slice为空时，追加元素，增加子循环遍历，当元素不在slice时，追加并且判断最大长度，否则跳出子循环。
