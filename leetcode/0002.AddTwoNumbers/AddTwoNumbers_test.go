@@ -4,6 +4,8 @@ import (
 	"Leetcode-GO/structures"
 	"fmt"
 	"testing"
+
+	"github.com/stretchr/testify/assert"
 )
 
 type question2 struct {
@@ -84,12 +86,12 @@ func Test_AddTwoNumbers(t *testing.T) {
 		},
 		// 如需多个测试，可以复制上方元素。
 	}
-
 	fmt.Printf("------------------------Leetcode Problem AddTwoNumbers------------------------\n")
 
 	for _, q := range qs {
-		_, p := q.ans2, q.para2
-		fmt.Printf("【input】:%v       【output】:%v\n", p, structures.List2Ints(addTwoNumbers(structures.Ints2List(p.one), structures.Ints2List(p.another))))
+		except, p := q.ans2, q.para2
+		result := structures.List2Ints(addTwoNumbers(structures.Ints2List(p.one), structures.Ints2List(p.another)))
+		fmt.Printf("【input】:%v    【except】:%v   【output】:%v\n", p, except.one, result)
+		assert.Equal(t, except.one, result)
 	}
-	fmt.Printf("\n\n\n")
 }
